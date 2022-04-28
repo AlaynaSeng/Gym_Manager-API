@@ -1,6 +1,4 @@
-
-import { model, Schema } from "mongoose";
-import group from "../interfaces/group";
+const { model, Schema } = require("mongoose");
 
 const groupSchema = new Schema<group>({
   name: { type: String, required: true },
@@ -10,4 +8,4 @@ const groupSchema = new Schema<group>({
   clients: { type: [String], required: true },
 });
 
-export default model("group", groupSchema);
+module.exports = model("group", groupSchema);

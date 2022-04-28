@@ -1,7 +1,6 @@
-import { model, Schema } from "mongoose";
-import client from "../interfaces/client";
+const { model, Schema } = require("mongoose");
 
-const clientSchema = new Schema<client>({
+const clientSchema = new Schema({
   fname: { type: String, required: true },
   lname: { type: String, required: true },
   email: { type: String, required: true },
@@ -11,4 +10,4 @@ const clientSchema = new Schema<client>({
   price: { type: String, required: true },
 });
 
-export default model("client", clientSchema);
+module.exports = model("client", clientSchema);

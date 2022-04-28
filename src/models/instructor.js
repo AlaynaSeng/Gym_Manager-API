@@ -1,6 +1,4 @@
-
-import { model, Schema } from "mongoose";
-import instructor from "../interfaces/onstructor";
+const { model, Schema } = require("mongoose");
 
 const instructorSchema = new Schema<instructor>({
   fname: { type: String, required: true },
@@ -10,4 +8,4 @@ const instructorSchema = new Schema<instructor>({
   specialty: { type: String, required: true },
 });
 
-export default model("instructor", instructorSchema);
+module.exports = model("instructor", instructorSchema);

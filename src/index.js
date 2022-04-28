@@ -1,13 +1,13 @@
-import cors from "cors";
-import express, { json } from "express";
-import { connect, connection } from "mongoose";
-import routes from "./routes";
+const cors = require("cors");
+const express = require("express");
+const { connect, connection } = require("mongoose");
+const routes = require("./routes");
 
 const app = express();
 const port = 4000;
 
 app.use(cors());
-app.use(json());
+app.use(express.json());
 app.use(routes);
 
 connect("mongodb://localhost:27017/gym_manager");

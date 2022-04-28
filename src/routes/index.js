@@ -1,8 +1,8 @@
 
-import { Router } from "express";
-import clients from "./clients";
-import groups from "./groups";
-import instructors from "./instructors";
+const { Router } = require("express");
+const clients = require("./clients");
+const groups = require("./groups");
+const instructors = require("./instructors");
 
 const router = Router();
 
@@ -10,4 +10,4 @@ router.use("/clients", clients);
 router.use("/instructors", instructors);
 router.use("/groups", groups);
 
-export default router;
+module.exports = router;
