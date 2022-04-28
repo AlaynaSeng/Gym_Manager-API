@@ -1,8 +1,8 @@
 
 const { Router } = require("express");
-const clients = require("./clients");
-const groups = require("./groups");
-const instructors = require("./instructors");
+const clients = require("./client");
+const groups = require("./group");
+const instructors = require("./instructor");
 
 const router = Router();
 
