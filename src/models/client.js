@@ -6,7 +6,7 @@ const clientSchema = new Schema({
   email: { type: String, required: true },
   phone: { type: String, required: true },
   address: { type: String, required: true },
-  date: { type: String, required: true },
+  registration: { type: Date, required: true },
   price: { type: String, required: true },
 });
 

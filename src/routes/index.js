@@ -6,8 +6,8 @@ const instructors = require("./instructor");
 
 const router = Router();
 
-router.use("/clients", clients);
-router.use("/instructors", instructors);
-router.use("/groups", groups);
+router.use("/client", clients);
+router.use("/instructor", instructors);
+router.use("/group", groups);
 
 module.exports = router;

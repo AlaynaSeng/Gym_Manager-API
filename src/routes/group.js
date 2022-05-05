@@ -1,6 +1,5 @@
 const { Router } = require("express");
-const group = require("../models/client");
-
+const group = require("../models/group");
 const router = Router();
 
 router.get("/", async (req, res) => {
@@ -11,12 +10,13 @@ router.post("/", async (req, res) => {
   res.json(await group.create(req.body));
 });
 
-router.delete("/:id", async (req, res) => {
-  await group.deleteOne({ id: req.params.id });
+router.delete("/delete/:id", async (req, res) => {
+  await group.deleteOne({ _id: req.params.id });
   res.end();
 });
 
-router.put("/:id", async (req, res) => {
+router.put("/update/:id", async (req, res) => {
+  console.log(req.body)
   res.json(
     await group.findByIdAndUpdate({ _id: req.params.id }, req.body, {
       new: true,
